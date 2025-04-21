@@ -46,6 +46,12 @@ To learn how to correctly add your own models, refer to the official **NewModels
 > All model IDs used for vehicles **must be negative**, such as `-1`, `-2`, `-3`, etc.  
 > This ensures compatibility with the NewModels system and avoids conflicts with default GTA IDs.
 
+## ⚠️ Warning
+
+This project may not be 100% functional in all cases.  
+I cannot guarantee that it won't cause issues or break something on your server.  
+It is recommended to use this only if you are familiar with **Lua** scripting and understand how to troubleshoot and fix potential problems.
+
 ## 🔧 Powered By
 
 This project uses [**NewModels**](https://github.com/Fernando-A-Rocha/mta-add-models) to register and load custom vehicle models with unique IDs dynamically – without replacing any GTA:SA defaults.
