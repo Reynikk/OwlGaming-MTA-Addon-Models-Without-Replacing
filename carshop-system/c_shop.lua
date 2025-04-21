@@ -120,7 +120,6 @@ function carshop_buyCar_close()
 	local vehicleToCancel = nil
 	if source == gui["btnCancel"] and theVehicle and isElement(theVehicle) then
 		vehicleToCancel = theVehicle
-		outputChatBox("Cancelling purchase...")
 	end
 
 	-- Clear GUI

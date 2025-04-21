@@ -309,13 +309,24 @@ function carshop_requestBuyVehicle(vehShopID, thePed)
 			local letter2 = string.char(math.random(65,90))
 			local plate = letter1 .. letter2 .. math.random(0, 9) .. " " .. math.random(1000, 9999)
 
-			-- Create temporary vehicle at the specific position
-			local x, y, z = 510.609375, -1303.1240234375, 17.2421875
-			local rx, ry, rz = 0, 0, 180 -- Face the vehicle toward the camera
-			local dim, int = 0, 0
+			-- Get spawn location from shop configuration
+			local tempSpawn = shopData.tempVehicleSpawn
+			if not tempSpawn then
+				-- Fallback to default position if no temp spawn is configured
+				tempSpawn = { 510.609375, -1303.1240234375, 17.2421875, 0, 0, 180, 0, 0 }
+				outputDebugString("CARSHOP / Warning: No tempVehicleSpawn configured for shop " .. shopData.name .. ", using default")
+			end
 
-			outputDebugString("CARSHOP / Creating temporary vehicle: Model=" .. modelId .. ", Shop=" .. shopData.name .. ", Custom position=" .. x .. "," .. y .. "," .. z)
+			local x, y, z = tempSpawn[1], tempSpawn[2], tempSpawn[3]
+			local rx, ry, rz = tempSpawn[4], tempSpawn[5], tempSpawn[6]
+			local int, dim = tempSpawn[7], tempSpawn[8]
+
+			outputDebugString("CARSHOP / Creating temporary vehicle: Model=" .. modelId .. ", Shop=" .. shopData.name .. ", Position=" .. x .. "," .. y .. "," .. z)
 			local tempVehicle = exports.vehicle:createVehicleWithCustomModel(modelId, x, y, z, rx, ry, rz, plate)
+
+			-- Set interior and dimension
+			setElementInterior(tempVehicle, int)
+			setElementDimension(tempVehicle, dim)
 
 			-- Freeze the vehicle in place
 			setElementFrozen(tempVehicle, true)
@@ -564,9 +575,6 @@ function carshop_cancelBuy()
 
 	outputDebugString("CARSHOP / Cancelling purchase and destroying temp vehicle")
 	destroyElement(source)
-
-	-- Notify the client
-	outputChatBox("Vehicle preview cancelled.", client, 255, 165, 0)
 end
 
 

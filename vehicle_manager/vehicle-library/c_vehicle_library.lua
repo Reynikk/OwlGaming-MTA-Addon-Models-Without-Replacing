@@ -153,7 +153,6 @@ function showLibrary(vehs, thePed)
 					local row, col = guiGridListGetSelectedItem(VehLibGrid)
 					if row ~= -1 and col ~= -1 then
 						local vehShopID = guiGridListGetItemText( VehLibGrid , row, 1 )
-						outputChatBox("Requesting to buy vehicle ID: " .. vehShopID)
 						triggerServerEvent("carshop:requestBuyVehicle", localPlayer, tonumber(vehShopID), thePed)
 						closeLibrary()
 					else
