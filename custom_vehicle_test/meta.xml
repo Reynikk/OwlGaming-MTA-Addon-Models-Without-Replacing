@@ -1,0 +1,5 @@
+<meta>
+    <info author="MTA Tacky Server" type="script" description="Custom Vehicle Model Test Script" />
+    <script src="custom_vehicle_test.lua" type="server" />
+    <min_mta_version server="1.5.5-9.14060"></min_mta_version>
+</meta>

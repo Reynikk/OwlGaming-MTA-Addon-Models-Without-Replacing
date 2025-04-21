@@ -1,0 +1,1 @@
+settings=object/1337/boxes.txt
