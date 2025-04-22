@@ -46,6 +46,20 @@ To learn how to correctly add your own models, refer to the official **NewModels
 > All model IDs used for vehicles **must be negative**, such as `-1`, `-2`, `-3`, etc.  
 > This ensures compatibility with the NewModels system and avoids conflicts with default GTA IDs.
 
+## ⚠️ Compatibility Note
+
+This addon requires **NewModels version 5.2.0 or higher**.  
+Version **5.2.0 is already included in this project**, so no need to download it separately.
+
+If you're using an **older version**, the integration **may not work properly**.
+
+> 🆕 If a newer version of NewModels is available, it **might not be fully compatible** with this addon.  
+> You're welcome to **try it**, but if issues occur, we recommend sticking with version **5.2.0**.  
+> You can find the latest releases on the official NewModels GitHub:  
+> 👉 [https://github.com/Fernando-A-Rocha/mta-add-models](https://github.com/Fernando-A-Rocha/mta-add-models)  
+>  
+> 🔄 If a new version is released and changes are needed, I will update this project accordingly.
+
 ## ⚠️ Warning
 
 This project may not be 100% functional in all cases.  
@@ -66,6 +80,11 @@ This project uses [**NewModels**](https://github.com/Fernando-A-Rocha/mta-add-mo
 
 - Thanks to [Fernando A. Rocha](https://github.com/Fernando-A-Rocha) for the incredible [NewModels](https://github.com/Fernando-A-Rocha/mta-add-models) system  
 - OwlGaming community for the original gamemode
+
+## ☕ Support Me
+
+If you find this useful and want to support my work, you can do so here:  
+👉 [https://paypal.me/brumicekcze](https://paypal.me/brumicekcze)
 
 ---
 
